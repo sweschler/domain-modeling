@@ -10,10 +10,13 @@ import Foundation
 
 struct Money {
     
+    // Properties of structure money
     var amount : Double
     var currency : String
     
-    //retuns a money object with the converted amount using c2
+    //convert is a method in the Money structure
+    //covert method is returning a Money object 
+    //
     func convert(inputCurrency: String) -> Money {
         var convertedMoney = Money(amount: self.amount, currency: inputCurrency)
         switch self.currency {
@@ -42,11 +45,19 @@ struct Money {
         return convertedMoney
     }
     
-    // takes two money objects, conerts money1's amount into money2's currency, adds the currencies in the new money object and returns it
+    //converts the first money currency into the second money currency and then adds the amount and returns the amount
+    // in terms of the second currency passed in
     func add(money2: Money) -> Money {
         var moneySum = Money(amount: Double(), currency: String())
         moneySum = self.convert(money2.currency)
         moneySum.amount += money2.amount
+        return moneySum
+        
+    }
+    func subtract(money2: Money) -> Money {
+        var moneySum = Money(amount: Double(), currency: String())
+        moneySum = self.convert(money2.currency) //Taking USD and converting the GBP to USD
+        moneySum.amount -= money2.amount
         return moneySum
         
     }

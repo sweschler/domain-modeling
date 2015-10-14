@@ -10,31 +10,36 @@ import Foundation
 
 class Job {
     var title: String
-    var salary: Double //todo: change to salary maybe
+    var salary: Salary
+    //var salaryType: Salary //todo: change to salary maybe
+    //var salaryAmount: Double
     
-//    enum Salary {
-//        case PerYear(String, Double)
-//        case PerHour(String, Double)
-//    }
-//    
-    init(title: String, salary: Double) {
-        self.title = title
-        self.salary = salary // Salary("per-hour", salary)
+    enum Salary {
+        case PerYear(Double)
+        case PerHour(Double)
     }
-//
-//    func calculateIncome(hoursWorked: Double) -> Double {
-//        if (Salary.PerYear = salary) {
-//            return salary.rawValue
-//        } else if (salary.hash == "perHour") {
-//            return hoursWorked * salary.rawValue
-//        }
-//        }
-//        return hoursWorked * salary.rawValue
-//    }
-//    
-//    func raise(raise: Double) -> Double {
-//        return salary.rawValue * raise * 100.0
-//        
-//    }
-//    
+    
+        init(title: String, salary: Salary) {
+            self.title = title
+            self.salary = salary
+        }
+    
+    func calculateIncome(hoursWorked: Double) -> Double {
+        switch salary {
+        case .PerHour(let amount):
+            return amount * hoursWorked
+        case .PerYear(let amount):
+            return amount
+        }
+    
+    }
+    func raise(raise: Double) -> Double {
+        switch salary {
+        case .PerHour(let amount):
+            return (amount * (raise / 100)) + amount
+        case .PerYear(let amount):
+            return (amount * (raise / 100)) + amount
+        }
+    }
 }
+    
