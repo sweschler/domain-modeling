@@ -47,17 +47,20 @@ struct Money {
     
     //converts the first money currency into the second money currency and then adds the amount and returns the amount
     // in terms of the second currency passed in
-    func add(money2: Money) -> Money {
+    func add(secondMoney: Money) -> Money {
         var moneySum = Money(amount: Double(), currency: String())
-        moneySum = self.convert(money2.currency)
-        moneySum.amount += money2.amount
+        moneySum = self.convert(secondMoney.currency)
+        moneySum.amount += secondMoney.amount
         return moneySum
         
     }
-    func subtract(money2: Money) -> Money {
+    
+    //converts the first money currency into the second money currency and then subtracts the amount and returns the amount
+    // in terms of the second currency passed in
+    func subtract(secondMoney: Money) -> Money {
         var moneySum = Money(amount: Double(), currency: String())
-        moneySum = self.convert(money2.currency) //Taking USD and converting the GBP to USD
-        moneySum.amount -= money2.amount
+        moneySum = self.convert(secondMoney.currency) //Taking USD and converting the GBP to USD
+        moneySum.amount -= secondMoney.amount
         return moneySum
         
     }

@@ -9,11 +9,11 @@
 import Foundation
 
 // Test for Money
-var moneyUSD = Money(amount: 100, currency: "USD")
-var moneyGBP = Money(amount: 100, currency: "GBP")
-println(moneyUSD.convert("GBP").amount)
-println(moneyUSD.add(moneyGBP).amount)
-println(moneyUSD.subtract(moneyGBP).amount)
+var money1 = Money(amount: 50, currency: "USD")
+var money2 = Money(amount: 50, currency: "EUR")
+println(money1.convert("EUR").amount) // 50 * 1.5 (convert from USD to EUR) = 75.00
+println(money1.add(money2).amount) // converts USD to EUR (50 USD * 1.5 = 75 EUR), then 75 EUR + 50 EUR = 125 EUR
+println(money1.subtract(money2).amount) // converts USD to EUR (50 USD * 1.5 = 75 EUR), then 75 EUR - 50 EUR = 25 EUR
 
 
 
@@ -29,7 +29,7 @@ var jobTest3 = Job(title: "Reporter", salary: .Hourly(10))
 println(jobTest3.raise(10)) // (10 * .1) + 10 = 11
 
 var jobTest4 = Job(title: "Cook", salary: .Yearly(10))
-println(jobTest4.raise(10)) // (100000 * .1) + 100000 = 101000
+println(jobTest4.raise(10)) // (10 * .1) + 10 = 11
 
 
 // Test for Person
@@ -39,7 +39,7 @@ sabrina.toString()
 
 println("")
 
-var sky = Person(firstName: "sky", lastName: "weschler", age: 16, job: nil, spouse: nil)
+var sky = Person(firstName: "Sky", lastName: "Weschler", age: 16, job: nil, spouse: nil)
 sky.toString()
 
 println("")
@@ -57,7 +57,8 @@ println("")
 var weschler = Family(members: [sabrina, sky, mom, dad])
 println(weschler.householdIncome(2000)) //20000 + 20
 
-println(weschler.haveChild().count)
+// Before accesing the haveChild function, there were 4 members, then the baby was added and now prints 5 members
+println(weschler.haveChild().count) //5
 
 
 
