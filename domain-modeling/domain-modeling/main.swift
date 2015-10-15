@@ -20,16 +20,18 @@ println(moneyUSD.subtract(moneyGBP).amount)
 
 // Test for Job
 var jobTest = Job(title: "Dancer", salary: .PerHour(10))
-println(jobTest.calculateIncome(100))
+println(jobTest.calculateIncome(100)) //100 * 10 = 10000
 
 var jobTest2 = Job(title: "Waitress", salary: .PerYear(100))
-println(jobTest2.calculateIncome(100))
+println(jobTest2.calculateIncome(100)) // 100
 
 var jobTest3 = Job(title: "Reporter", salary: .PerHour(10))
-println(jobTest3.raise(10))
+println(jobTest3.raise(10)) // 10 * 10 = 100
 
 var jobTest4 = Job(title: "Cook", salary: .PerYear(10))
-println(jobTest4.raise(10))
+println(jobTest4.raise(10)) // 10
+
+println(jobTest4.raise(10)) //
 
 // Test for Person
 
