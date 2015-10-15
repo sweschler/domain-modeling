@@ -15,6 +15,9 @@ class Family {
         self.members = members
     }
     
+    //Checking each member in the array of Person to see if they have a job 
+    //if they do, it accesses the calculateIncome function in the Job class and calculates the income
+    //Then adds all the incomes with the members who have a job
     func householdIncome(hoursWorked: Double) -> Double {
         var totalIncome: Double = 0.0
         for member in members {
@@ -24,10 +27,12 @@ class Family {
         }
         return totalIncome
     }
+    
+    //Adds a new born member to the array of Person
     func haveChild() -> [Person]{
         for member in members {
             if member.age > 21 {
-                members.append(Person(firstName: String(), lastName: String(), age: 0, job: nil, spouse: nil))
+                members.append(Person(firstName: "firstBaby", lastName: String(), age: 0, job: nil, spouse: nil))
                         return members
             }
         }

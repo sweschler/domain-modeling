@@ -16,7 +16,7 @@ struct Money {
     
     //convert is a method in the Money structure
     //covert method is returning a Money object 
-    //convert method takes in a a type of inputCurrency and converts the currecny amount to the inputCurrecny 
+    //convert method takes in a currency called inputCurrency and converts the original amount to the inputCurrecny
     func convert(inputCurrency: String) -> Money {
         var convertedMoney = Money(amount: self.amount, currency: inputCurrency)
         switch self.currency {

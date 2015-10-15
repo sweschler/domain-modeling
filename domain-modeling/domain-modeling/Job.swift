@@ -11,12 +11,10 @@ import Foundation
 class Job {
     var title: String
     var salary: Salary
-    //var salaryType: Salary //todo: change to salary maybe
-    //var salaryAmount: Double
     
     enum Salary {
-        case PerYear(Double)
-        case PerHour(Double)
+        case Yearly(Double)
+        case Hourly(Double)
     }
     
         init(title: String, salary: Salary) {
@@ -28,22 +26,22 @@ class Job {
     //if it is per-hourly, it will multiply the amount by the number of hours worked passed in
     func calculateIncome(hoursWorked: Double) -> Double {
         switch salary {
-        case .PerHour(let amount):
+        case .Hourly(let amount):
             return amount * hoursWorked
-        case .PerYear(let amount):
+        case .Yearly(let amount):
             return amount
         }
     
     }
-    //raise is being passed in as a percent amount
+    //raise is being passed in as a percentage
     //raise is divided by 100 to make it a decimal 
     //in both .PerHour and .PerYear case, the raise based on the amount is being calculated then added back up
-    //to the amount to return the final amount with the raise 
+    //to the amount to return the final salary
     func raise(raise: Double) -> Double {
         switch salary {
-        case .PerHour(let amount):
+        case .Hourly(let amount):
             return (amount * (raise / 100)) + amount
-        case .PerYear(let amount):
+        case .Yearly(let amount):
             return (amount * (raise / 100)) + amount
         }
     }
