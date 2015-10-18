@@ -8,12 +8,12 @@
 
 import Foundation
 
-
 protocol Mathematics {
-    
+    func add(secondMoney: Money) -> Money
+    func subtract(secondMoney: Money) -> Money
 }
 
-struct Money: CustomStringConvertible {
+struct Money: CustomStringConvertible, Mathematics {
     
     // Properties of structure money
     var amount : Double
@@ -23,9 +23,7 @@ struct Money: CustomStringConvertible {
         return("\(currency)\(amount)")
     }
 
-    
-    
-    
+
     //convert is a method in the Money structure
     //covert method is returning a Money object 
     //convert method takes in a currency called inputCurrency and converts the original amount to the inputCurrecny
