@@ -42,13 +42,27 @@ struct Money: CustomStringConvertible {
                 }
             case "GBP":
                 if (inputCurrency == "EUR") {
-                    convertedMoney.amount *= 3
+                    convertedMoney.amount *= 3.0
                 } else if (inputCurrency == "CAN") {
                     convertedMoney.amount *= 2.5
+                } else if (inputCurrency == "USD") {
+                    convertedMoney.amount *= 2.0
                 }
             case "EUR":
                 if (inputCurrency == "CAN") {
-                    convertedMoney.amount *= (5 / 6)
+                    convertedMoney.amount *= (5.0 / 6.0)
+                } else if (inputCurrency == "USD") {
+                    convertedMoney.amount *= (2.0 / 3.0)
+                } else if (inputCurrency == "GBP") {
+                    convertedMoney.amount *= (1.0 / 3.0)
+                }
+            case "CAN":
+                if (inputCurrency == "EUR") {
+                    convertedMoney.amount *= (6.0 / 5.0)
+                } else if (inputCurrency == "USD") {
+                    convertedMoney.amount *= (4.0 / 5.0)
+                } else if (inputCurrency == "GBP") {
+                    convertedMoney.amount *= (2.0 / 5.0)
                 }
         default:
             convertedMoney.amount = self.amount

@@ -12,5 +12,5 @@ extension Double {
     var USD: Money { return Money(amount: self, currency: "USD") }
     var EUR: Money { return Money(amount: self, currency: "EUR") }
     var GBP: Money { return Money(amount: self, currency: "GBP") }
-    var YEN: Money { return Money(amount: self, currency: "YEN") }
+    var YEN: Money { return Money(amount: self, currency: "CAN") }
 }

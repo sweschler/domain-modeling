@@ -79,4 +79,5 @@ print(weschler.description)
 //Test for extension
 print("Test for Extension")
 print(100.USD.convert("GBP"))
+print(100.GBP.convert("USD"))
 print(100.USD)
