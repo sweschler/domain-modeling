@@ -8,15 +8,22 @@
 
 import Foundation
 
-class Job {
+class Job: CustomStringConvertible {
     var title: String
     var salary: Salary
     
+    var description: String {
+        return ("\(title)\(salary)")
+    }
+    
+
     enum Salary {
+    
         case Yearly(Double)
         case Hourly(Double)
     }
     
+
         init(title: String, salary: Salary) {
             self.title = title
             self.salary = salary

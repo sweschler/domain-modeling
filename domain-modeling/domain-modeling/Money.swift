@@ -8,11 +8,23 @@
 
 import Foundation
 
-struct Money {
+
+protocol Mathematics {
+    
+}
+
+struct Money: CustomStringConvertible {
     
     // Properties of structure money
     var amount : Double
     var currency : String
+    
+    var description: String {
+        return("\(currency)\(amount)")
+    }
+
+    
+    
     
     //convert is a method in the Money structure
     //covert method is returning a Money object 

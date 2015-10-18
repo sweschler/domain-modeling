@@ -8,12 +8,17 @@
 
 import Foundation
 
-class Family {
+class Family: CustomStringConvertible  {
     var members: [Person]
+    
+    var description: String {
+        return("\(members.description)")
+    }
     
     init(members: [Person]) {
         self.members = members
     }
+    
     
     //Checking each member in the array of Person to see if they have a job 
     //if they do, it accesses the calculateIncome function in the Job class and calculates the income

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		990378331BD40F7B002EDC83 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990378321BD40F7B002EDC83 /* Protocols.swift */; };
 		9956DDC41BCDEB01000F9164 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9956DDC31BCDEB01000F9164 /* main.swift */; };
 		9956DDD81BCDFCCC000F9164 /* Money.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9956DDD71BCDFCCC000F9164 /* Money.swift */; };
 		9956DDDA1BCDFFC9000F9164 /* Job.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9956DDD91BCDFFC9000F9164 /* Job.swift */; };
@@ -27,6 +28,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		990378321BD40F7B002EDC83 /* Protocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
 		9956DDC01BCDEB01000F9164 /* domain-modeling */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "domain-modeling"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9956DDC31BCDEB01000F9164 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		9956DDD71BCDFCCC000F9164 /* Money.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Money.swift; sourceTree = "<group>"; };
@@ -70,6 +72,7 @@
 				9956DDD91BCDFFC9000F9164 /* Job.swift */,
 				9956DDDB1BCE0139000F9164 /* Person.swift */,
 				9956DDDD1BCE0186000F9164 /* Family.swift */,
+				990378321BD40F7B002EDC83 /* Protocols.swift */,
 			);
 			path = "domain-modeling";
 			sourceTree = "<group>";
@@ -133,6 +136,7 @@
 				9956DDDE1BCE0186000F9164 /* Family.swift in Sources */,
 				9956DDD81BCDFCCC000F9164 /* Money.swift in Sources */,
 				9956DDDA1BCDFFC9000F9164 /* Job.swift in Sources */,
+				990378331BD40F7B002EDC83 /* Protocols.swift in Sources */,
 				9956DDDC1BCE0139000F9164 /* Person.swift in Sources */,
 				9956DDC41BCDEB01000F9164 /* main.swift in Sources */,
 			);

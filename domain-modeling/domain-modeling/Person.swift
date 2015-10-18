@@ -10,12 +10,16 @@ import Foundation
 
 //job and spouse are optional because if the person is younger than 18 they don't have a job 
 //and if the person is younger than 16 they don't have a job or a spouse
-class Person {
+class Person: CustomStringConvertible {
     var firstName: String
     var lastName: String
     var age: Int
     var job: Job?
     var spouse: Person?
+    
+    var description: String {
+        return String(self.toString()) 
+    }
     
     //Checks if the person is older than or equal to 16, which case sets the job 
     // checks if the person is older than or equal to 18, which case sets the spouse
