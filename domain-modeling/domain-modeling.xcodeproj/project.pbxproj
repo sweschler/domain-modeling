@@ -103,6 +103,8 @@
 		9956DDB81BCDEB01000F9164 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftMigration = 0700;
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0640;
 				ORGANIZATIONNAME = "Weschler, Sabrina";
 				TargetAttributes = {

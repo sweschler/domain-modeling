@@ -8,11 +8,6 @@
 
 import Foundation
 
-// Protocol to print the currecny and amount in one String line
-protocol  CustomStringConvertible {
-    var description: String { get }
-}
-
 extension Double {
     var USD: Money { return Money(amount: self, currency: "USD") }
     var EUR: Money { return Money(amount: self, currency: "EUR") }
