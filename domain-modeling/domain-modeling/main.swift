@@ -62,13 +62,15 @@ print(weschler.householdIncome(2000)) //20000 + 20
 print(weschler.haveChild().count) //5 family members
 
 //Test for Protocols
+print("Test for Protocols:")
+print("Test for Money Struct Protocol")
 print(money1.description) //prints USD50.0 based on the protocol
 print(money1.convert("EUR").description) //prints the converted amount and currency in the protocol format EUR75.0
-
+print("Test for Job Class Protocol")
 print(jobTest.description) //prints the title and hourly or salary rate
-
+print("Test for Person Class Protocol")
 print(sabrina.description) // prints characteristics of Person object sabrina, first name, last name etc.
-
+print("Test for Family Class Protocol")
 print(weschler.description) //prints the toString for all the family members in the array Person
 
 
